@@ -1,7 +1,3 @@
-A01 CP372
-Catalin Pop
-Jan 29, 2015
-
 SYNONYM DICTIONARY STORAGE PROTOCOL
 
 
@@ -16,56 +12,56 @@ When the server starts the dictionary is empty. There are no words with synonyms
 3. FORMAT FOR COMMANDS
 
 
-•	3.1 CLIENT
+3.1 CLIENT
 
 The client will need to follow these formats to send messages through the GET and SET buttons:
 
 
 SET
 
-word1 word2 (words are separated by a space) 
+	SET word1 word2 (words are separated by a space) 
 
-Example:
+	Example:
 
-SET thanks obama
+	SET thanks obama
 
 
 GET
 
-word (one word, searches dictionary for that word and synonyms)
+	GET word (one word, searches dictionary for that word and synonyms)
 
-Example:
+	Example:
 
-GET obama 
+	GET obama 
 
 
 REMOVE
 
-word (one word, searches dictionary for it and its synonyms)
+	REM word (one word, searches dictionary for it and its synonyms)
 
-Example:
+	Example:
 
-REMOVE obama
+	REM obama
 
 
-•	3.2 SERVER
+3.2 SERVER
 
 The server will return the following messages after each command:
 
 
 SET
 
-Notifies the user if the words are saved into the dictionary.
+	Notifies the user if the words are saved into the dictionary.
 
 
 GET
 
-Gives the user back the specified word and all of its synonyms.
+	Gives the user back the specified word and all of its synonyms.
 
 
 REMOVE
 
-Notifies the user that the word has been removed if it was there in the first place.
+	Notifies the user that the word has been removed if it was there in the first place.
 
 
 4. SYNCRONIZATION
